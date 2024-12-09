@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="AccountCell" customModule="Descope" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrh-Fn-dlN" userLabel="Title">
+                        <rect key="frame" x="20" y="20" width="168" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3u-Pn-aTy" userLabel="Subtitle">
+                        <rect key="frame" x="20" y="44.333333333333336" width="168" height="18"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="123 456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWS-h2-cHn" userLabel="Code">
+                        <rect key="frame" x="196" y="24.666666666666668" width="104" height="33.666666666666657"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hrh-Fn-dlN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="7zw-ct-9KF"/>
+                    <constraint firstItem="C3u-Pn-aTy" firstAttribute="trailing" secondItem="hrh-Fn-dlN" secondAttribute="trailing" id="GN5-qQ-zXC"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="C3u-Pn-aTy" secondAttribute="bottom" constant="20" symbolic="YES" id="I5v-zu-oW8"/>
+                    <constraint firstAttribute="trailing" secondItem="YWS-h2-cHn" secondAttribute="trailing" constant="20" symbolic="YES" id="WWN-qM-XFb"/>
+                    <constraint firstItem="C3u-Pn-aTy" firstAttribute="top" secondItem="hrh-Fn-dlN" secondAttribute="bottom" constant="4" id="bad-iG-5CK"/>
+                    <constraint firstItem="YWS-h2-cHn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hrh-Fn-dlN" secondAttribute="trailing" constant="8" id="e8O-Qt-GSc"/>
+                    <constraint firstItem="YWS-h2-cHn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hYZ-Ty-3IA"/>
+                    <constraint firstItem="C3u-Pn-aTy" firstAttribute="leading" secondItem="hrh-Fn-dlN" secondAttribute="leading" id="hst-UE-5t9"/>
+                    <constraint firstItem="hrh-Fn-dlN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="zzT-9L-A0f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="codeLabel" destination="YWS-h2-cHn" id="7Cb-X5-vun"/>
+                <outlet property="subtitleLabel" destination="C3u-Pn-aTy" id="lne-FR-6yQ"/>
+                <outlet property="titleLabel" destination="hrh-Fn-dlN" id="x9T-N0-FzS"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="65.492957746478879"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
