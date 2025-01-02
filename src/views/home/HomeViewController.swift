@@ -45,12 +45,13 @@ class HomeViewController: UIViewController, HomeViewModelDelegate, UITableViewDe
 
     func updateViews() {
         guard isViewLoaded, !isAnimating else { return }
+        emptyView.isHidden = !viewModel.state.accounts.isEmpty
         tableView.reloadData()
     }
 
     // Actions
 
-    @objc private func didPressAddAccount() {
+    @IBAction private func didPressAddAccount() {
         Log.i("Add Account pressed")
         viewModel.handleAddPressed()
     }
@@ -58,6 +59,7 @@ class HomeViewController: UIViewController, HomeViewModelDelegate, UITableViewDe
     // Animations
 
     func willAddAccount() {
+        emptyView.isHidden = true
         isAnimating = true
     }
 
@@ -86,7 +88,9 @@ class HomeViewController: UIViewController, HomeViewModelDelegate, UITableViewDe
             tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .left)
         } completion: { [self] completed in
             isAnimating = false
-            updateViews()
+            UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve) { [self] in
+                updateViews()
+            }
         }
     }
 

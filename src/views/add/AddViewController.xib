@@ -39,7 +39,7 @@
                             <blurEffect style="dark"/>
                         </visualEffectView>
                         <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2b2-c8-snN" userLabel="Confirmation View">
-                            <rect key="frame" x="32" y="366.66666666666669" width="329" height="143.66666666666669"/>
+                            <rect key="frame" x="32" y="322.66666666666669" width="329" height="143.66666666666669"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanned Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-BP-Bnk" userLabel="Scanned Label">
                                     <rect key="frame" x="84.666666666666686" y="20" width="160" height="25"/>
@@ -95,7 +95,7 @@
                         <constraint firstItem="5N3-0j-aPe" firstAttribute="leading" secondItem="IuQ-Q2-bZX" secondAttribute="leading" id="Cgh-6L-9cy"/>
                         <constraint firstItem="5N3-0j-aPe" firstAttribute="top" secondItem="IuQ-Q2-bZX" secondAttribute="top" id="DDh-aF-e8e"/>
                         <constraint firstItem="9oi-zb-4Li" firstAttribute="trailing" secondItem="cLO-Bk-aiu" secondAttribute="trailing" constant="32" id="Fi6-BJ-wFZ"/>
-                        <constraint firstItem="2b2-c8-snN" firstAttribute="centerY" secondItem="9oi-zb-4Li" secondAttribute="centerY" id="HNn-iB-FIf"/>
+                        <constraint firstItem="2b2-c8-snN" firstAttribute="centerY" secondItem="9oi-zb-4Li" secondAttribute="centerY" multiplier="0.9" id="HNn-iB-FIf"/>
                         <constraint firstAttribute="bottom" secondItem="5N3-0j-aPe" secondAttribute="bottom" id="Ph4-Ch-DPD"/>
                         <constraint firstAttribute="trailing" secondItem="5N3-0j-aPe" secondAttribute="trailing" id="YGp-GL-b24"/>
                         <constraint firstItem="2b2-c8-snN" firstAttribute="leading" secondItem="9oi-zb-4Li" secondAttribute="leading" constant="32" id="dSl-AT-oCp"/>
@@ -105,7 +105,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.11902336350509099" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Y13-07-5la" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BVM-5m-lXK"/>
                 <constraint firstItem="IuQ-Q2-bZX" firstAttribute="leading" secondItem="Y13-07-5la" secondAttribute="leading" id="C8L-G8-wtd"/>
