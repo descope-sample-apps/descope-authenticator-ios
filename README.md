@@ -7,7 +7,7 @@
   <h3 align="center">Descope Authenticator for iOS</h3>
 
   <p align="center">
-    An example TOTP application written in Swift.
+    An example TOTP application written in Swift
   </p>
 </div>
 
