@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Links
 
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        Log.i("\(AppName) received URL", options[.sourceApplication], url)
+        Log.i("\(AppName) received URL", options[.sourceApplication], url.scheme)
         session.didReceiveProvisioningURL(url)
         return true
     }

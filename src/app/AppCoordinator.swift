@@ -55,9 +55,9 @@ class AppCoordinator: HomeCoordinatorDelegate, AddCoordinatorDelegate {
             let (key, secret) = try Key.parse(url: url)
             accountManager.addAccount(key: key, secret: secret)
         } catch .unsupported {
-            Log.d("Captured unsupported key URL", url)
+            Log.d("Captured unsupported key URL", url.host)
         } catch /* .malformed */ { // https://github.com/swiftlang/swift/issues/74555
-            Log.d("Captured malformed key URL", url)
+            Log.d("Captured malformed key URL", url.host)
         }
     }
 

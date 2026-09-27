@@ -97,7 +97,7 @@ class AddViewModelClass: AddViewModel, CameraManagerDelegate {
     func didScan(url: URL, key: Key, secret: Data) {
         guard scanned == nil else { return }
 
-        Log.i("Scanned invitation URL", url, key)
+        Log.i("Scanned invitation URL", key)
         scanned = (url, key, secret)
         updateState()
 
@@ -116,15 +116,15 @@ class AddViewModelClass: AddViewModel, CameraManagerDelegate {
 
     func cameraManagerDidCapture(_ cameraManager: CameraManager, value: String) {
         guard Date.now.timeIntervalSince(started) > 1 else { return } // short delay to let screen fully appear
-        guard let url = URL(string: value) else { return Log.d("Captured invalid value from camera", value) }
+        guard let url = URL(string: value) else { return Log.d("Captured invalid value from camera") }
         guard url.scheme == Key.scheme else { return Log.d("Captured generic URL", value) }
         do {
             let (key, secret) = try Key.parse(url: url)
             didScan(url: url, key: key, secret: secret)
         } catch .unsupported {
-            Log.d("Captured unsupported key URL", url)
+            Log.d("Captured unsupported key URL", url.host)
         } catch /* .malformed */ { // https://github.com/swiftlang/swift/issues/74555
-            Log.d("Captured malformed key URL", url)
+            Log.d("Captured malformed key URL", url.host)
         }
     }
 }
